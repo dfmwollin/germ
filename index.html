@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keime-Welt für Kinder</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="images/wuschel.png" alt="Wuschel die weiße Blutzelle" class="mascot">
+                <h1>Keime-Welt für Kinder</h1>
+            </div>
+            <div class="audio-control">
+                <button id="toggle-audio" class="audio-button">
+                    <img src="images/speaker.png" alt="Audio an/aus" class="audio-icon">
+                </button>
+            </div>
+        </header>
+
+        <nav>
+            <ul class="main-menu">
+                <li><a href="#bakterien" class="menu-item bakterien">Bakterien</a></li>
+                <li><a href="#viren" class="menu-item viren">Viren</a></li>
+                <li><a href="#pilze" class="menu-item pilze">Pilze</a></li>
+                <li><a href="#protozoen" class="menu-item protozoen">Protozoen</a></li>
+                <li><a href="#spiele" class="menu-item spiele">Spiele</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section class="intro">
+                <div class="mascot-intro">
+                    <img src="images/wuschel-wave.png" alt="Wuschel winkt" class="mascot-large">
+                    <div class="speech-bubble">
+                        <p>Hallo! Ich bin Wuschel, deine weiße Blutzelle. Ich helfe dir, mehr über Keime zu lernen!</p>
+                        <button class="audio-trigger" data-audio="intro">
+                            <img src="images/speaker-small.png" alt="Anhören" class="audio-icon-small">
+                        </button>
+                    </div>
+                </div>
+                <div class="intro-text">
+                    <h2>Willkommen in der Keime-Welt!</h2>
+                    <p>Hier lernst du alles über kleine Wesen, die wir nicht sehen können.</p>
+                    <button class="audio-trigger" data-audio="welcome">
+                        <img src="images/speaker-small.png" alt="Anhören" class="audio-icon-small">
+                    </button>
+                </div>
+            </section>
+
+            <section id="bakterien" class="germ-section">
+                <h2>Bakterien</h2>
+                <div class="content-container">
+                    <div class="germ-image">
+                        <img src="images/bakterien.png" alt="Cartoon Bakterien" class="germ-character">
+                    </div>
+                    <div class="germ-info">
+                        <p>Bakterien sind winzig kleine Lebewesen. Sie sind so klein, dass wir sie nicht sehen können! Manche Bakterien sind unsere Freunde und helfen unserem Bauch, Essen zu verdauen. Andere Bakterien sind frech und können uns krank machen, wenn sie in unseren Körper kommen.</p>
+                        <p>Bakterien können überall leben - auf unseren Händen, auf Spielsachen und sogar in unserem Mund!</p>
+                        <button class="audio-trigger" data-audio="bakterien">
+                            <img src="images/speaker-small.png" alt="Anhören" class="audio-icon-small">
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="viren" class="germ-section">
+                <h2>Viren</h2>
+                <div class="content-container">
+                    <div class="germ-image">
+                        <img src="images/viren.png" alt="Cartoon Viren" class="germ-character">
+                    </div>
+                    <div class="germ-info">
+                        <p>Viren sind noch winziger als Bakterien - wie kleine Zauberer! Sie können sich nicht alleine bewegen, sondern müssen in unsere Körperzellen schlüpfen, um sich zu vermehren. Wenn sie das tun, können wir Schnupfen, Husten oder Fieber bekommen.</p>
+                        <p>Viren können durch die Luft fliegen, wenn jemand niest oder hustet. Deshalb ist es wichtig, in die Armbeuge zu niesen!</p>
+                        <button class="audio-trigger" data-audio="viren">
+                            <img src="images/speaker-small.png" alt="Anhören" class="audio-icon-small">
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pilze" class="germ-section">
+                <h2>Pilze</h2>
+                <div class="content-container">
+                    <div class="germ-image">
+                        <img src="images/pilze.png" alt="Cartoon Pilze" class="germ-character">
+                    </div>
+                    <div class="germ-info">
+                        <p>Pilze sind wie kleine Pflanzen, aber sie sind auch Keime! Manche Pilze sind lecker und können gegessen werden, wie die Pilze auf der Pizza. Andere Pilze können auf unserer Haut oder zwischen unseren Zehen wachsen und uns jucken lassen.</p>
+                        <p>Pilze mögen es warm und feucht. Deshalb ist es wichtig, sich nach dem Baden oder Schwimmen gut abzutrocknen!</p>
+                        <button class="audio-trigger" data-audio="pilze">
+                            <img src="images/speaker-small.png" alt="Anhören" class="audio-icon-small">
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="protozoen" class="germ-section">
+                <h2>Protozoen</h2>
+                <div class="content-container">
+                    <div class="germ-image">
+                        <img src="images/protozoen.png" alt="Cartoon Protozoen" class="germ-character">
+                    </div>
+                    <div class="germ-info">
+                        <p>Protozoen sind winzige Tierchen, die im Wasser schwimmen können. Sie sind wie kleine Wassertierchen mit lustigen Formen! Manche können in unseren Körper gelangen, wenn wir schmutziges Wasser trinken.</p>
+                        <p>Deshalb ist es wichtig, immer sauberes Wasser zu trinken und Obst und Gemüse gut zu waschen, bevor wir es essen!</p>
+                        <button class="audio-trigger" data-audio="protozoen">
+                            <img src="images/speaker-small.png" alt="Anhören" class="audio-icon-small">
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="verbreitung" class="info-section">
+                <h2>Wie verbreiten sich Keime?</h2>
+                <div class="info-cards">
+                    <div class="info-card">
+                        <img src="images/niesen.png" alt="Niesen" class="info-image">
+                        <p>Wenn wir niesen oder husten, fliegen viele kleine Tröpfchen mit Keimen durch die Luft wie winzige Regentropfen. Diese Tröpfchen können auf andere Menschen landen und sie krank machen.</p>
+                        <button class="audio-trigger" data-audio="niesen">
+                            <img src="images/speaker-small.png" alt="Anhören" class="audio-icon-small">
+                        </button>
+                    </div>
+                    <div class="info-card">
+                        <img src="images/haende.png" alt="Schmutzige Hände" class="info-image">
+                        <p>Unsere Hände berühren viele Dinge jeden Tag - Spielzeug, Türklinken, Tische. Dabei sammeln sie viele Keime. Wenn wir dann unsere Augen, Nase oder Mund berühren, können die Keime in unseren Körper gelangen.</p>
+                        <button class="audio-trigger" data-audio="haende">
+                            <img src="images/speaker-small.png" alt="Anhören" class="audio-icon-small">
+                        </button>
+                    </div>
+                    <div class="info-card">
+                        <img src="images/essen.png" alt="Essen teilen" class="info-image">
+                        <p>Wenn wir unsere Trinkflasche oder unser Essen mit anderen teilen, können Keime von einem Mund zum anderen hüpfen. Das ist wie ein Keim-Taxi direkt in den Körper!</p>
+                        <button class="audio-trigger" data-audio="essen">
+                            <img src="images/speaker-small.png" alt="Anhören" class="audio-icon-small">
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="immunsystem" class="info-section">
+                <h2>Wie schützt uns unser Körper?</h2>
+                <div class="content-container">
+                    <div class="germ-image">
+                        <img src="images/wuschel-shield.png" alt="Wuschel mit Schild" class="mascot-large">
+                    </div>
+                    <div class="germ-info">
+                        <p>Unser Körper hat eine tolle Armee, die uns beschützt! Diese Armee besteht aus weißen Blutzellen wie Wuschel. Sie sind wie kleine Superhelden, die durch unseren Körper reisen und nach bösen Keimen suchen.</p>
+                        <p>Wenn sie einen Keim finden, umzingeln sie ihn und fressen ihn auf! So bleiben wir gesund. Manchmal bekommen wir Fieber, wenn unsere weißen Blutzellen gegen viele Keime kämpfen - das ist ein Zeichen, dass unsere Körperarmee hart arbeitet!</p>
+                        <button class="audio-trigger" data-audio="immunsystem">
+                            <img src="images/speaker-small.png" alt="Anhören" class="audio-icon-small">
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="gesundheit" class="info-section">
+                <h2>Wie bleiben wir gesund?</h2>
+                <div class="info-cards">
+                    <div class="info-card">
+                        <img src="images/haendewaschen.png" alt="Hände waschen" class="info-image">
+                        <p>Wasche deine Hände mit Seife und Wasser, besonders vor dem Essen und nach dem Toilettengang. Zähle dabei bis 20 oder singe zweimal "Alle meine Entchen" - so lange solltest du deine Hände waschen!</p>
+                        <button class="audio-trigger" data-audio="haendewaschen">
+                            <img src="images/speaker-small.png" alt="Anhören" class="audio-icon-small">
+                        </button>
+                    </div>
+                    <div class="info-card">
+                        <img src="images/husten.png" alt="In die Armbeuge husten" class="info-image">
+                        <p>Huste und niese immer in deine Armbeuge, nicht in deine Hand! So können die Keime nicht auf deine Hände und dann auf Spielzeug oder andere Kinder gelangen. Das ist wie ein Keim-Gefängnis in deinem Ärmel!</p>
+                        <button class="audio-trigger" data-audio="husten">
+                            <img src="images/speaker-small.png" alt="Anhören" class="audio-icon-small">
+                        </button>
+                    </div>
+                    <div class="info-card">
+                        <img src="images/obst.png" alt="Gesundes Essen" class="info-image">
+                        <p>Iss viel Obst und Gemüse! Sie enthalten Vitamine, die Wuschel und seine Freunde stärker machen. Auch genug Schlaf hilft deiner Körperarmee, stark zu bleiben und gegen Keime zu kämpfen.</p>
+                        <button class="audio-trigger" data-audio="obst">
+                            <img src="images/speaker-small.png" alt="Anhören" class="audio-icon-small">
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="spiele" class="games-section">
+                <h2>Spiele</h2>
+                <div class="games-container">
+                    <div class="game-card">
+                        <img src="images/game-catch.png" alt="Fang die Keime Spiel" class="game-image">
+                        <h3>Fang die Keime</h3>
+                        <p>Tippe schnell auf die hüpfenden Keime, bevor sie sich verbreiten können! Je mehr Keime du fängst, desto mehr Punkte bekommst du. Aber sei schnell, die Zeit läuft!</p>
+                        <button class="game-button" data-game="catch">Spielen</button>
+                        <button class="audio-trigger" data-audio="game-catch">
+                            <img src="images/speaker-small.png" alt="Anhören" class="audio-icon-small">
+                        </button>
+                    </div>
+                    <div class="game-card">
+                        <img src="images/game-wash.png" alt="Hände waschen Spiel" class="game-image">
+                        <h3>Hände waschen Challenge</h3>
+                        <p>Ziehe die Seife über deine Hände, um alle Schmutzflecken zu entfernen! Versuche, alle Keime abzuwaschen, bevor die Zeit abläuft. Saubere Hände halten dich gesund!</p>
+                        <button class="game-button" data-game="wash">Spielen</button>
+                        <button class="audio-trigger" data-audio="game-wash">
+                            <img src="images/speaker-small.png" alt="Anhören" class="audio-icon-small">
+                        </button>
+                    </div>
+                    <div class="game-card">
+                        <img src="images/game-defense.png" alt="Immun-Abwehr Spiel" class="game-image">
+                        <h3>Immun-Abwehr</h3>
+                        <p>Hilf Wuschel, die Keime zu fangen! Bewege Wuschel mit den Pfeiltasten und fange so viele Keime wie möglich. Du kannst auch mit einem Freund zusammen spielen!</p>
+                        <button class="game-button" data-game="defense">Spielen</button>
+                        <button class="audio-trigger" data-audio="game-defense">
+                            <img src="images/speaker-small.png" alt="Anhören" class="audio-icon-small">
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="mascot-footer">
+                <img src="images/wuschel-small.png" alt="Wuschel klein" class="mascot-small">
+            </div>
+            <p>Keime-Welt für Kinder © 2025</p>
+        </footer>
+    </div>
+
+    <!-- Game Overlays -->
+    <div id="game-catch-overlay" class="game-overlay">
+        <div class="game-container">
+            <h2>Fang die Keime</h2>
+            <div id="catch-game-area" class="game-area"></div>
+            <div class="game-controls">
+                <button id="start-catch-game" class="game-control-button">Start</button>
+                <button id="close-catch-game" class="game-control-button">Schließen</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="game-wash-overlay" class="game-overlay">
+        <div class="game-container">
+            <h2>Hände waschen Challenge</h2>
+            <div id="wash-game-area" class="game-area"></div>
+            <div class="game-controls">
+                <button id="start-wash-game" class="game-control-button">Start</button>
+                <button id="close-wash-game" class="game-control-button">Schließen</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="game-defense-overlay" class="game-overlay">
+        <div class="game-container">
+            <h2>Immun-Abwehr</h2>
+            <div id="defense-game-area" class="game-area"></div>
+            <div class="game-controls">
+                <button id="start-defense-game" class="game-control-button">Start</button>
+                <button id="close-defense-game" class="game-control-button">Schließen</button>
+                <div class="player-select">
+                    <button id="one-player" class="player-button active">1 Spieler</button>
+                    <button id="two-player" class="player-button">2 Spieler</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/audio.js"></script>
+    <script src="js/games/catch.js"></script>
+    <script src="js/games/wash.js"></script>
+    <script src="js/games/defense.js"></script>
+</body>
+</html>

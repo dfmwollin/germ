@@ -1,0 +1,545 @@
+/* Allgemeine Stile */
+:root {
+    --primary-color: #4DB6AC;
+    --secondary-color: #FF8A65;
+    --accent-color: #FFD54F;
+    --background-color: #E0F7FA;
+    --text-color: #37474F;
+    --bakterien-color: #E57373;
+    --viren-color: #64B5F6;
+    --pilze-color: #81C784;
+    --protozoen-color: #9575CD;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Neue', cursive;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Stile */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 5px solid var(--primary-color);
+    border-radius: 0 0 15px 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.mascot {
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.audio-button {
+    background: var(--accent-color);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.audio-button:hover {
+    transform: scale(1.1);
+}
+
+.audio-icon {
+    width: 30px;
+    height: 30px;
+}
+
+/* Navigation Stile */
+nav {
+    margin: 20px 0;
+}
+
+.main-menu {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    display: block;
+    padding: 15px 25px;
+    margin: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.bakterien {
+    background-color: var(--bakterien-color);
+}
+
+.viren {
+    background-color: var(--viren-color);
+}
+
+.pilze {
+    background-color: var(--pilze-color);
+}
+
+.protozoen {
+    background-color: var(--protozoen-color);
+}
+
+.spiele {
+    background-color: var(--secondary-color);
+}
+
+/* Intro Sektion */
+.intro {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mascot-intro {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.mascot-large {
+    width: 120px;
+    height: 120px;
+    margin-right: 20px;
+}
+
+.speech-bubble {
+    position: relative;
+    background-color: var(--accent-color);
+    border-radius: 20px;
+    padding: 15px;
+    max-width: 70%;
+}
+
+.speech-bubble:after {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-right-color: var(--accent-color);
+    border-left: 0;
+    margin-top: -15px;
+}
+
+.intro-text {
+    text-align: center;
+}
+
+/* Keime Sektionen */
+.germ-section {
+    margin: 30px 0;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#bakterien {
+    background-color: rgba(229, 115, 115, 0.2);
+}
+
+#viren {
+    background-color: rgba(100, 181, 246, 0.2);
+}
+
+#pilze {
+    background-color: rgba(129, 199, 132, 0.2);
+}
+
+#protozoen {
+    background-color: rgba(149, 117, 205, 0.2);
+}
+
+.content-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.germ-image {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+}
+
+.germ-character {
+    width: 150px;
+    height: 150px;
+    animation: wiggle 3s infinite;
+}
+
+@keyframes wiggle {
+    0%, 100% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+}
+
+.germ-info {
+    flex: 2;
+    min-width: 300px;
+    padding: 15px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+/* Info Sektionen */
+.info-section {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.info-card {
+    width: 200px;
+    margin: 15px;
+    padding: 15px;
+    background-color: var(--accent-color);
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.info-image {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+/* Spiele Sektion */
+.games-section {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: rgba(255, 138, 101, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.games-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.game-card {
+    width: 300px;
+    margin: 15px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.game-image {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+
+.game-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-family: 'Comic Neue', cursive;
+    font-size: 1.1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.game-button:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+/* Audio Trigger Buttons */
+.audio-trigger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.audio-icon-small {
+    width: 20px;
+    height: 20px;
+    transition: all 0.3s ease;
+}
+
+.audio-icon-small:hover {
+    transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    padding: 20px;
+    border-top: 5px solid var(--primary-color);
+    text-align: center;
+}
+
+.mascot-small {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+/* Game Overlays */
+.game-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.game-area {
+    width: 100%;
+    height: 400px;
+    margin: 20px 0;
+    border: 3px solid var(--primary-color);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.game-controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.game-control-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-family: 'Comic Neue', cursive;
+    font-size: 1.1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.game-control-button:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.player-select {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.player-button {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 25px;
+    padding: 8px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-family: 'Comic Neue', cursive;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.player-button.active {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .mascot {
+        width: 60px;
+        height: 60px;
+    }
+
+    .mascot-large {
+        width: 100px;
+        height: 100px;
+    }
+
+    .speech-bubble {
+        max-width: 100%;
+    }
+
+    .content-container {
+        flex-direction: column;
+    }
+
+    .germ-image, .germ-info {
+        width: 100%;
+    }
+
+    .menu-item {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .mascot {
+        width: 50px;
+        height: 50px;
+    }
+
+    .audio-button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .audio-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .game-area {
+        height: 300px;
+    }
+}
