@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let dirtSpots = [];
     let gameTimer;
     let countdownTimer;
+    let bestScore = 0;
     
     // Spielbereich-Dimensionen
     let gameWidth;
@@ -63,6 +64,20 @@ document.addEventListener('DOMContentLoaded', function() {
         timeDisplay.style.zIndex = '10';
         timeDisplay.textContent = 'Zeit: 30';
         gameArea.appendChild(timeDisplay);
+
+        // Beste Sauberkeit aus dem lokalen Speicher
+        bestScore = parseInt(localStorage.getItem('washHighScore') || '0');
+
+        const bestDisplay = document.createElement('div');
+        bestDisplay.id = 'wash-best-display';
+        bestDisplay.style.position = 'absolute';
+        bestDisplay.style.bottom = '10px';
+        bestDisplay.style.left = '10px';
+        bestDisplay.style.fontSize = '18px';
+        bestDisplay.style.fontWeight = 'bold';
+        bestDisplay.style.zIndex = '10';
+        bestDisplay.textContent = `Rekord: ${bestScore}%`;
+        gameArea.appendChild(bestDisplay);
         
         // Seife erstellen
         const soap = document.createElement('div');
@@ -415,9 +430,16 @@ document.addEventListener('DOMContentLoaded', function() {
             resultText = 'Versuche es noch einmal! Wasche deine Hände gründlicher!';
         }
         
+        // Rekord aktualisieren
+        if (score > bestScore) {
+            bestScore = score;
+            localStorage.setItem('washHighScore', bestScore);
+        }
+
         resultDisplay.innerHTML = `
             <p>Spiel vorbei!</p>
             <p>Sauberkeit: ${score}%</p>
+            <p>Rekord: ${bestScore}%</p>
             <p>${resultText}</p>
             <p>Klicke auf "Start", um noch einmal zu spielen!</p>
         `;
@@ -440,6 +462,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const scoreDisplay = document.getElementById('wash-score-display');
         if (scoreDisplay) {
             scoreDisplay.textContent = `Sauberkeit: ${score}%`;
+        }
+
+        if (score > bestScore) {
+            bestScore = score;
+            const bestDisplay = document.getElementById('wash-best-display');
+            if (bestDisplay) {
+                bestDisplay.textContent = `Rekord: ${bestScore}%`;
+            }
         }
     }
     
