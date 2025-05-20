@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let germs = [];
     let gameTimer;
     let countdownTimer;
+    let bestScore = 0;
     
     // Germ-Typen mit verschiedenen Farben und Punkten
     const germTypes = [
@@ -58,6 +59,20 @@ document.addEventListener('DOMContentLoaded', function() {
         timeDisplay.style.zIndex = '10';
         timeDisplay.textContent = 'Zeit: 30';
         gameArea.appendChild(timeDisplay);
+
+        // Beste Punktzahl aus dem lokalen Speicher
+        bestScore = parseInt(localStorage.getItem('catchHighScore') || '0');
+
+        const bestDisplay = document.createElement('div');
+        bestDisplay.id = 'catch-best-display';
+        bestDisplay.style.position = 'absolute';
+        bestDisplay.style.bottom = '10px';
+        bestDisplay.style.left = '10px';
+        bestDisplay.style.fontSize = '18px';
+        bestDisplay.style.fontWeight = 'bold';
+        bestDisplay.style.zIndex = '10';
+        bestDisplay.textContent = `Rekord: ${bestScore}`;
+        gameArea.appendChild(bestDisplay);
         
         // Spielvariablen zurücksetzen
         score = 0;
@@ -137,9 +152,16 @@ document.addEventListener('DOMContentLoaded', function() {
             resultText = 'Versuche es noch einmal! Übe, um mehr Keime zu fangen!';
         }
         
+        // Rekord aktualisieren
+        if (score > bestScore) {
+            bestScore = score;
+            localStorage.setItem('catchHighScore', bestScore);
+        }
+
         resultDisplay.innerHTML = `
             <p>Spiel vorbei!</p>
             <p>Deine Punkte: ${score}</p>
+            <p>Rekord: ${bestScore}</p>
             <p>${resultText}</p>
             <p>Klicke auf "Start", um noch einmal zu spielen!</p>
         `;
@@ -301,6 +323,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const scoreDisplay = document.getElementById('score-display');
         if (scoreDisplay) {
             scoreDisplay.textContent = `Punkte: ${score}`;
+        }
+
+        if (score > bestScore) {
+            bestScore = score;
+            const bestDisplay = document.getElementById('catch-best-display');
+            if (bestDisplay) {
+                bestDisplay.textContent = `Rekord: ${bestScore}`;
+            }
         }
     }
     
