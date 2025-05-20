@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let countdownTimer;
     let germCreationTimer;
     let playerMode = 1; // Standard: 1 Spieler
+    let bestScore = 0;
     
     // Spielbereich-Dimensionen
     let gameWidth;
@@ -95,6 +96,20 @@ document.addEventListener('DOMContentLoaded', function() {
         timeDisplay.style.zIndex = '10';
         timeDisplay.textContent = 'Zeit: 45';
         gameArea.appendChild(timeDisplay);
+
+        // Beste Punktzahl aus dem lokalen Speicher
+        bestScore = parseInt(localStorage.getItem('defenseHighScore') || '0');
+
+        const bestDisplay = document.createElement('div');
+        bestDisplay.id = 'defense-best-display';
+        bestDisplay.style.position = 'absolute';
+        bestDisplay.style.bottom = '10px';
+        bestDisplay.style.left = '10px';
+        bestDisplay.style.fontSize = '18px';
+        bestDisplay.style.fontWeight = 'bold';
+        bestDisplay.style.zIndex = '10';
+        bestDisplay.textContent = `Rekord: ${bestScore}`;
+        gameArea.appendChild(bestDisplay);
         
         // Wuschel erstellen (Spieler 1)
         createWuschel();
@@ -550,9 +565,16 @@ document.addEventListener('DOMContentLoaded', function() {
             resultText = 'Versuche es noch einmal! Übe, um mehr Keime zu fangen!';
         }
         
+        // Rekord aktualisieren
+        if (score > bestScore) {
+            bestScore = score;
+            localStorage.setItem('defenseHighScore', bestScore);
+        }
+
         resultDisplay.innerHTML = `
             <p>Spiel vorbei!</p>
             <p>Deine Punkte: ${score}</p>
+            <p>Rekord: ${bestScore}</p>
             <p>${resultText}</p>
             <p>Klicke auf "Start", um noch einmal zu spielen!</p>
         `;
@@ -575,6 +597,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const scoreDisplay = document.getElementById('defense-score-display');
         if (scoreDisplay) {
             scoreDisplay.textContent = `Punkte: ${score}`;
+        }
+
+        if (score > bestScore) {
+            bestScore = score;
+            const bestDisplay = document.getElementById('defense-best-display');
+            if (bestDisplay) {
+                bestDisplay.textContent = `Rekord: ${bestScore}`;
+            }
         }
     }
     
